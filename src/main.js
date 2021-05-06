@@ -1,50 +1,34 @@
 const questions = [
     {
-        question: "A vigilante kills someone they believe is a criminal, but they accidentally killed an innocent person.",
+        question: "A very unskilled vigilante kills someone they believe is a criminal, but then realizes that they actually killed an innocent person.",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [1,0,0], b: [0,1,1] }
     }, {
-        question: "good intent, bad abidance, bad outcome",
+        question: "A group of activists riot for a cause, but the message doesn't get across and ends up harming their cause.",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [1,0,0], b: [0,1,1] }
     }, {
-        question: "good intent, bad abidance, bad outcome",
-        answers: { a: "Ethical", b: "Unethical" },
-        updates: { a: [1,0,0], b: [0,1,1] }
-    }, {
-        question: "A store owner lowers the wages of its employees so that they themselves can earn more cash.",
+        question: "A murderer donates to a charity, desperate to cover up their past actions, but the charity turns out to be a scam and runs away with the money.",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [0,1,0], b: [1,0,1] }
     }, {
-        question: "bad intent, good abidance, bad outcome",
+        question: "A selfish burglar saves the life of their partner in crime.",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [0,1,0], b: [1,0,1] }
     }, {
-        question: "bad intent, good abidance, bad outcome",
-        answers: { a: "Ethical", b: "Unethical" },
-        updates: { a: [0,1,0], b: [1,0,1] }
-    }, {
-        question: "Someone misses an important appointment, causing an important project to not be finished on time.",
+        question: "A superhero refrains from killing their arch-nemesis, despite said arch-nemesis's penchant for murder.",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [1,1,0], b: [0,0,1] }
     }, {
-        question: "good intent, good abidance, bad outcome",
+        question: "A person saves the life of a known murderer, and the murderer goes on to kill more people.",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [1,1,0], b: [0,0,1] }
     }, {
-        question: "good intent, good abidance, bad outcome",
-        answers: { a: "Ethical", b: "Unethical" },
-        updates: { a: [1,1,0], b: [0,0,1] }
-    }, {
-        question: "A psychopath kills someone they believe is someone they've hated for a long time, but they accidentally instead killed a wanted serial killer right before said serial killer could kill a family of four.",
+        question: "A psychopath, who gets a thrill from killing any person at all, kills a wanted serial killer.",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [0,0,1], b: [1,1,0] }
     }, {
-        question: "bad intent, bad abidance, good outcom",
-        answers: { a: "Ethical", b: "Unethical" },
-        updates: { a: [0,0,1], b: [1,1,0] }
-    }, {
-        question: "bad intent, bad abidance, good outcom",
+        question: "A neighbor destroys a person's new flower patch out of jealousy; however, that person's other neighbor is deathly allergic to pollen, so the action saved that neighbor's life. ",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [0,0,1], b: [1,1,0] }
     }, {
@@ -52,28 +36,19 @@ const questions = [
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [1,0,1], b: [0,1,0] }
     }, {
-        question: "Someone steals resources (money, food, ect.) from the rich and gives those resources to the poor.",
+        question: "A person goes around convincing depressed, poor people to upload themselves into a utopian simulation, where they will be satisfied with life.",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [1,0,1], b: [0,1,0] }
     }, {
-        question: "good intent, bad abidance, good outcome",
-        answers: { a: "Ethical", b: "Unethical" },
-        updates: { a: [1,0,1], b: [0,1,0] }
-    }, {
-        question: "bad intent, good abidance, good outcome",
+        question: "A murderer donates to an orphanage, desperate to cover up their past actions.",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [0,1,1], b: [1,0,0] }
     }, {
-        question: "bad intent, good abidance, good outcome",
-        answers: { a: "Ethical", b: "Unethical" },
-        updates: { a: [0,1,1], b: [1,0,0] }
-    }, {
-        question: "bad intent, good abidance, good outcome",
+        question: "A person has a polite conversation with someone that they secretly and unreasonably hate.",
         answers: { a: "Ethical", b: "Unethical" },
         updates: { a: [0,1,1], b: [1,0,0] }
     }
 ]
-
 
 var current_question = 0;
 var category1 = 0; //virtues
