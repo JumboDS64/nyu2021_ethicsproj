@@ -45,6 +45,7 @@ function displayQuestion() {
     if (current_question < questions.length) {
         var question = document.createElement("p");
         question.innerText = questions[current_question].question;
+        question.setAttribute("class", "");
 
         quizBox.appendChild(question);
 
@@ -53,6 +54,7 @@ function displayQuestion() {
             var option = document.createElement("input");
             option.setAttribute("type", "radio");
             option.setAttribute("name", "answer");
+            option.setAttribute("class", "form-check-input");
             option.setAttribute("value", key);
             label.textContent = val;
 
