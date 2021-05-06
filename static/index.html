@@ -9,14 +9,10 @@
 
     <script src="../src/main.js"></script>
 
-    <h2> The Ethics Quiz</h2>
-<!-- 
-    <script>
-        import{category1, category2, category3} from "src/main.js";
-    </script> -->
 </head>
 
 <body>
+    <h2> The Ethics Quiz</h2>
     <div class="container">
 
     <p class="startText" id="startTxt">Welcome to the ethics quiz. You will be given several scenarios, and asked to respond. Please respond honestly to the best of your ability, and you will be given a categorization of your ethical values.</p>
@@ -24,7 +20,7 @@
     <div id="quizBox">
     </div >
 
-    <div class="button"> <button id="btn" onclick="doNext()">Start</button> </div>
+    <div class="button"> <button id="btn" type="button" onclick="doNext()" class="btn btn-primary">Start</button> </div>
 
         <div id="result">
         </div>

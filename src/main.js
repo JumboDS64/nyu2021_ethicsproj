@@ -91,6 +91,7 @@ function updateScores() {
 
 function getScore() {
     // export {category1};
+<<<<<<< HEAD
     var result = document.getElementById("result");
     // var virRes = category1;
     // var deoRes = category2;
@@ -163,3 +164,8 @@ function doNext() {
 
     current_question++;
 }
+<<<<<<< HEAD
+=======
+
+var virRes;
+>>>>>>> 0b871e9c7dba63747dd99cbda62b191434e690a9
