@@ -98,12 +98,39 @@ function getScore() {
     console.log(virRes);
     result.textContent = "hi " + category1 + " " + category2 + " " + category3;
     document.getElementById('results').style.display='block';
+
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "light2",
+        title: {
+            text: "Ethical Report"
+        },
+        axisY: {
+            title: "Score",
+        },
+        data: [{
+            type: "column",
+            showInLegend: true,
+            legendMarkerColor: "grey",
+            legendText: "Ethical Stances",
+            dataPoints: [
+                { y : category1, label: "Virtue" },
+                { y : category2, label: "Deontological" },
+                { y : category3, label: "Consequentialism" },
+            ]
+        }]
+    });
+
+    chart.render();
 }
 
 function doNext() {
     if (current_question == 0) {
         var btn = document.getElementById("btn");
         btn.textContent = "Next";
+
+        document.getElementById("startTxt").textContent = "Please respond honestly to the best of your ability, and you will be given a categorization of your ethical values.";
 
         displayQuestion();
     }

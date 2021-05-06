@@ -8,6 +8,8 @@
     <title>Ethics quiz</title>
 
     <script src="../src/main.js"></script>
+
+    <h2> The Ethics Quiz</h2>
 <!-- 
     <script>
         import{category1, category2, category3} from "src/main.js";
@@ -17,7 +19,7 @@
 <body>
     <div class="container">
 
-    <p class="startText">Welcome to the ethics quiz. You will be given several scenarios, and asked to respond. Please respond honestly to the best of your ability, and you will be given a categorization of your ethical values.</p>
+    <p class="startText" id="startTxt">Welcome to the ethics quiz. You will be given several scenarios, and asked to respond. Please respond honestly to the best of your ability, and you will be given a categorization of your ethical values.</p>
 
     <div id="quizBox">
     </div >
@@ -27,36 +29,6 @@
         <div id="result">
         </div>
     </div>
-
-    <div>
-        <script >
-            // import{category1} from "src/main.js";
-            window.onload = function () {
-            var chart = new CanvasJS.Chart("chartContainer", {
-            animationEnabled: true,
-            theme: "light2", // "light1", "light2", "dark1", "dark2"
-            title:{
-                text: "Ethical Report"
-            },
-            axisY: {
-                title: "Score"
-            },
-            data: [{
-                type: "column",
-                showInLegend: true,
-                legendMarkerColor: "grey",
-                legendText: "Ethical Stances",
-                dataPoints: [
-                { y: virRes, label: "Virtue" },
-                { y: 2,  label: "Deontological" },
-                { y: 1,  label: "consequentialism" }
-                ]
-            }]
-            });
-            chart.render();
-            }
-        </script>
-      </div>
 
       <div id="results" style="display:none;">
         <div id="chartContainer" class="graph" style="height: 300px; width: 600px"></div>
