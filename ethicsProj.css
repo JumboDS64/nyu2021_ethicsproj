@@ -32,6 +32,15 @@ button{
   margin: auto;
 }
 
+#result{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  font-size: 22pt;
+
+}
+
 #results{
   /* border: solid 1px black; */
   justify-content: center;

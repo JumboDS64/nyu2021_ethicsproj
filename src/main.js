@@ -92,11 +92,22 @@ function updateScores() {
 function getScore() {
     // export {category1};
     var result = document.getElementById("result");
-    var virRes = category1;
-    var deoRes = category2;
-    var conRes = category3;
-    console.log(virRes);
-    result.textContent = "hi " + category1 + " " + category2 + " " + category3;
+    // var virRes = category1;
+    // var deoRes = category2;
+    // var conRes = category3;
+    // console.log(virRes);
+
+    if((category1 > category2) && (category1 > category3)){
+        result.textContent = "Virtue";
+    }
+    else if((category2 > category1) && (category2 > category3)){
+        result.textContent = "Deontological";
+    }
+    else if((category3 > category1) && (category3 > category2)){
+        result.textContent = "Consequentialism";
+    }
+
+    //result.textContent = "hi " + category1 + " " + category2 + " " + category3;
     document.getElementById('results').style.display='block';
 
 
@@ -152,5 +163,3 @@ function doNext() {
 
     current_question++;
 }
-
-var virRes;
