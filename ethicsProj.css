@@ -48,6 +48,13 @@ button{
   margin-right: 50px;
 }
 
+#definition{
+  width: 75vw;
+  text-align: center;
+  margin: auto;
+}
+
+
 #quizBox{
   border: solid 1px black;
   text-align: center;

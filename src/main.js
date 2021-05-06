@@ -1,31 +1,79 @@
 const questions = [
     {
-        question: "Question 1",
-        answers: {
-            a: "Answer Choice 1",
-            b: "Answer Choice 2",
-            c: "Answer Choice 3",
-        },
-        updates: {
-            a: [1,0,0],
-            b: [0,1,0],
-            c: [0,0,1]
-        }
-    },
-    {
-        question: "Question 2",
-        answers: {
-            a: "Answer Choice 1",
-            b: "Answer Choice 2",
-            c: "Answer Choice 3",
-        },
-        updates: {
-            a: [1,0,0],
-            b: [0,1,0],
-            c: [0,0,1]
-        }
-    },
+        question: "A vigilante kills someone they believe is a criminal, but they accidentally killed an innocent person.",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [1,0,0], b: [0,1,1] }
+    }, {
+        question: "good intent, bad abidance, bad outcome",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [1,0,0], b: [0,1,1] }
+    }, {
+        question: "good intent, bad abidance, bad outcome",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [1,0,0], b: [0,1,1] }
+    }, {
+        question: "A store owner lowers the wages of its employees so that they themselves can earn more cash.",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [0,1,0], b: [1,0,1] }
+    }, {
+        question: "bad intent, good abidance, bad outcome",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [0,1,0], b: [1,0,1] }
+    }, {
+        question: "bad intent, good abidance, bad outcome",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [0,1,0], b: [1,0,1] }
+    }, {
+        question: "Someone misses an important appointment, causing an important project to not be finished on time.",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [1,1,0], b: [0,0,1] }
+    }, {
+        question: "good intent, good abidance, bad outcome",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [1,1,0], b: [0,0,1] }
+    }, {
+        question: "good intent, good abidance, bad outcome",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [1,1,0], b: [0,0,1] }
+    }, {
+        question: "A psychopath kills someone they believe is someone they've hated for a long time, but they accidentally instead killed a wanted serial killer right before said serial killer could kill a family of four.",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [0,0,1], b: [1,1,0] }
+    }, {
+        question: "bad intent, bad abidance, good outcom",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [0,0,1], b: [1,1,0] }
+    }, {
+        question: "bad intent, bad abidance, good outcom",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [0,0,1], b: [1,1,0] }
+    }, {
+        question: "A poor person steals food to eat.",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [1,0,1], b: [0,1,0] }
+    }, {
+        question: "Someone steals resources (money, food, ect.) from the rich and gives those resources to the poor.",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [1,0,1], b: [0,1,0] }
+    }, {
+        question: "good intent, bad abidance, good outcome",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [1,0,1], b: [0,1,0] }
+    }, {
+        question: "bad intent, good abidance, good outcome",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [0,1,1], b: [1,0,0] }
+    }, {
+        question: "bad intent, good abidance, good outcome",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [0,1,1], b: [1,0,0] }
+    }, {
+        question: "bad intent, good abidance, good outcome",
+        answers: { a: "Ethical", b: "Unethical" },
+        updates: { a: [0,1,1], b: [1,0,0] }
+    }
 ]
+
 
 var current_question = 0;
 var category1 = 0; //virtues
@@ -91,8 +139,8 @@ function updateScores() {
 
 function getScore() {
     // export {category1};
-<<<<<<< HEAD
     var result = document.getElementById("result");
+    var defi = document.getElementById("definition");
     // var virRes = category1;
     // var deoRes = category2;
     // var conRes = category3;
@@ -100,13 +148,43 @@ function getScore() {
 
     if((category1 > category2) && (category1 > category3)){
         result.textContent = "Virtue";
+        defi.textContent = "HELLO";
     }
     else if((category2 > category1) && (category2 > category3)){
         result.textContent = "Deontological";
+        defi.textContent = "You tend decide whether something is right or wrong under a set of rules or laws, rather than on the consquences of action.";
+
     }
     else if((category3 > category1) && (category3 > category2)){
         result.textContent = "Consequentialism";
+        defi.textContent = "HELLLOO";
+
     }
+
+    else if((category1 == category2) && (category1 > category3)){
+        result.textContent = "Virtue/Deontological";
+        defi.textContent = "HELLLOO";
+
+    }
+    else if((category1 == category3) && (category1 > category2)){
+        result.textContent = "Virtue/Consequentialism";
+        defi.textContent = "HELLLOO";
+
+    }
+
+    else if((category2 == category3) && (category2 > category1)){
+        result.textContent = "Deontological/Consequentialism";
+        defi.textContent = "HELLLOO";
+
+    }
+
+    else{
+        result.textContent = "Virtue/Deontological/Consequientialism";
+        defi.textContent = "HELLLOO";
+    }
+
+
+
 
     //result.textContent = "hi " + category1 + " " + category2 + " " + category3;
     document.getElementById('results').style.display='block';
@@ -164,8 +242,3 @@ function doNext() {
 
     current_question++;
 }
-<<<<<<< HEAD
-=======
-
-var virRes;
->>>>>>> 0b871e9c7dba63747dd99cbda62b191434e690a9
