@@ -35,9 +35,9 @@ button{
 #result{
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   justify-content: center;
-  font-size: 22pt;
+  font-size: 24pt;
 
 }
 
@@ -50,8 +50,10 @@ button{
 
 #definition{
   width: 75vw;
+  font-size: 18pt;
   text-align: center;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 

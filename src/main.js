@@ -145,42 +145,46 @@ function getScore() {
     // var deoRes = category2;
     // var conRes = category3;
     // console.log(virRes);
+    var dif1 = ((category1 - category2) * -1);
+    var dif2 = ((category1 - category3) * -1);
+    var dif3 = ((category2 - category3) * -1);
+    var difAll = ((category1 - category2) * -1);
 
     if((category1 > category2) && (category1 > category3)){
         result.textContent = "Virtue";
-        defi.textContent = "HELLO";
+        defi.textContent = "You think mainly in terms of good and bad, you focus heavily on the intent and moral character of a person";
     }
     else if((category2 > category1) && (category2 > category3)){
         result.textContent = "Deontological";
-        defi.textContent = "You tend decide whether something is right or wrong under a set of rules or laws, rather than on the consquences of action.";
+        defi.textContent = "You tend decide whether something is right or wrong under a set of rules or laws, rather than on the consquences of action";
 
     }
     else if((category3 > category1) && (category3 > category2)){
         result.textContent = "Consequentialism";
-        defi.textContent = "HELLLOO";
+        defi.textContent = "The consequences of one's conduct are the ultimate basis for your judgment about the rightness or wrongness of an action";
 
     }
 
-    else if((category1 == category2) && (category1 > category3)){
+    else if( ((-2 <= dif1 <= 2)) && (category1 > category3)){
         result.textContent = "Virtue/Deontological";
-        defi.textContent = "HELLLOO";
+        defi.textContent = "A mix of both, you focus heavily on the intent and moral character of a person as well as on a set of rules/laws when dictating right or wrong";
 
     }
-    else if((category1 == category3) && (category1 > category2)){
+    else if( ((-2 <= dif2 <= 2))  && (category1 > category2)){
         result.textContent = "Virtue/Consequentialism";
-        defi.textContent = "HELLLOO";
+        defi.textContent = "A mix of both, you focus heavily on the intent and moral character of a person as well as on the consequences of an action when dictating right or wrong";
 
     }
 
-    else if((category2 == category3) && (category2 > category1)){
+    else if( ((-2 <= dif3 <= 2))  && (category2 > category1)){
         result.textContent = "Deontological/Consequentialism";
-        defi.textContent = "HELLLOO";
+        defi.textContent = "A mix of both, you decide what is right or wrong based on a set of rules/law and on the consequence of an action.";
 
     }
 
     else{
         result.textContent = "Virtue/Deontological/Consequientialism";
-        defi.textContent = "HELLLOO";
+        defi.textContent = "You have a balanced stance, a good mix of all three...";
     }
 
 
